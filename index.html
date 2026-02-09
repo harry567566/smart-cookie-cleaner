@@ -1,105 +1,103 @@
 <!DOCTYPE html>
-     <html lang="en">
-     <head>
-         <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>Smart Cookie Cleaner - Auto Delete Cookies for Privacy</title>
-         <style>
-             * { margin: 0; padding: 0; box-sizing: border-box; }
-             body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1e293b;
-     background: #f8fafc; }
-             .hero { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 80px 20px;
-     text-align: center; }
-             .hero h1 { font-size: 2.5rem; margin-bottom: 16px; }
-             .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
-             .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 6px 16px; border-radius: 20px;
-     font-size: 0.85rem; margin-bottom: 24px; }
-             .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-             .features { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 40px 0; }
-             .feature { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; }
-             .feature h3 { font-size: 1rem; margin-bottom: 8px; color: #1e40af; }
-             .feature p { font-size: 0.9rem; color: #64748b; line-height: 1.5; }
-             .pricing { text-align: center; background: white; border: 2px solid #f59e0b; border-radius: 16px; padding:
-     40px; margin: 40px 0; }
-             .pricing .price { font-size: 3rem; font-weight: 800; color: #1e293b; }
-             .pricing .label { color: #64748b; margin-top: 4px; }
-             .pricing .trial { color: #3b82f6; font-weight: 600; margin-top: 12px; }
-             .section-title { font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 8px; }
-             .section-sub { text-align: center; color: #64748b; margin-bottom: 32px; }
-             .privacy { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 24px; margin: 40px 0;
-     text-align: center; }
-             .privacy h3 { color: #166534; margin-bottom: 8px; }
-             .privacy p { color: #15803d; font-size: 0.9rem; }
-             footer { text-align: center; padding: 40px 20px; color: #94a3b8; font-size: 0.85rem; border-top: 1px solid
-     #e2e8f0; }
-             footer a { color: #3b82f6; text-decoration: none; }
-             @media (max-width: 600px) { .features { grid-template-columns: 1fr; } .hero h1 { font-size: 1.8rem; } }
-         </style>
-     </head>
-     <body>
-         <div class="hero">
-             <div class="badge">Chrome Extension &middot; Manifest V3</div>
-             <h1>Smart Cookie Cleaner</h1>
-             <p>Automatically delete tracking cookies when you close tabs. Protect your privacy with zero effort.</p>
-         </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cookie Cleaner - Auto Delete Cookies for Privacy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1e293b; background: #f8fafc; }
+        .hero { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 80px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 16px; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
+        .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; margin-bottom: 24px; }
+        .cta-btn { display: inline-block; background: white; color: #1d4ed8; font-weight: 700; font-size: 1.1rem; padding: 14px 36px; border-radius: 12px; text-decoration: none; margin-top: 8px; transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+        .cta-sub { font-size: 0.85rem; opacity: 0.8; margin-top: 12px; }
+        .hook { font-size: 1.05rem; opacity: 0.95; max-width: 640px; margin: 0 auto 28px; background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 10px; font-weight: 500; }
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 40px 0; }
+        .feature { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; }
+        .feature h3 { font-size: 1rem; margin-bottom: 8px; color: #1e40af; }
+        .feature p { font-size: 0.9rem; color: #64748b; line-height: 1.5; }
+        .pricing { text-align: center; background: white; border: 2px solid #f59e0b; border-radius: 16px; padding: 40px; margin: 40px 0; }
+        .pricing .price { font-size: 3rem; font-weight: 800; color: #1e293b; }
+        .pricing .label { color: #64748b; margin-top: 4px; }
+        .pricing .trial { color: #3b82f6; font-weight: 600; margin-top: 12px; }
+        .section-title { font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 8px; }
+        .section-sub { text-align: center; color: #64748b; margin-bottom: 32px; }
+        .privacy { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 24px; margin: 40px 0; text-align: center; }
+        .privacy h3 { color: #166534; margin-bottom: 8px; }
+        .privacy p { color: #15803d; font-size: 0.9rem; }
+        footer { text-align: center; padding: 40px 20px; color: #94a3b8; font-size: 0.85rem; border-top: 1px solid #e2e8f0; }
+        footer a { color: #3b82f6; text-decoration: none; }
+        @media (max-width: 600px) { .features { grid-template-columns: 1fr; } .hero h1 { font-size: 1.8rem; } }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="badge">Chrome Extension &middot; Manifest V3</div>
+        <h1>Smart Cookie Cleaner</h1>
+        <p>Automatically delete tracking cookies when you close tabs. Protect your privacy with zero effort.</p>
+        <div class="hook">Cookie AutoDelete was removed from Chrome. 500,000+ users lost their cookie manager. This is the MV3 replacement.</div>
+        <a class="cta-btn" href="#" id="cws-link">Install from Chrome Web Store</a>
+        <p class="cta-sub">60-day free trial &middot; Then $2 for lifetime access</p>
+    </div>
 
-         <div class="container">
-             <h2 class="section-title">Features</h2>
-             <p class="section-sub">Everything you need to keep your browsing private</p>
+    <div class="container">
+        <h2 class="section-title">Features</h2>
+        <p class="section-sub">Everything you need to keep your browsing private</p>
 
-             <div class="features">
-                 <div class="feature">
-                     <h3>Auto Clean on Tab Close</h3>
-                     <p>Cookies are automatically deleted when you close a tab and no other tab uses the same domain.</p>
-                 </div>
-                 <div class="feature">
-                     <h3>Smart Whitelist</h3>
-                     <p>Keep cookies for sites you trust. Supports wildcards like *.google.com.</p>
-                 </div>
-                 <div class="feature">
-                     <h3>Greylist (Temp Protect)</h3>
-                     <p>Temporarily protect cookies for the current session. Clears on browser restart.</p>
-                 </div>
-                 <div class="feature">
-                     <h3>Delay Protection</h3>
-                     <p>Configurable delay before cleaning, so you can reopen accidentally closed tabs.</p>
-                 </div>
-                 <div class="feature">
-                     <h3>Cookie Aging</h3>
-                     <p>Auto-delete cookies older than a set number of days. Keep your browser fresh.</p>
-                 </div>
-                 <div class="feature">
-                     <h3>Scheduled Cleanup</h3>
-                     <p>Daily or weekly automatic cleanup of all non-whitelisted cookies.</p>
-                 </div>
-                 <div class="feature">
-                     <h3>Statistics Dashboard</h3>
-                     <p>See how many cookies were deleted, which domains are tracked, and cleanup history.</p>
-                 </div>
-                 <div class="feature">
-                     <h3>Import / Export</h3>
-                     <p>Import your whitelist from Cookie AutoDelete or export for backup.</p>
-                 </div>
-             </div>
+        <div class="features">
+            <div class="feature">
+                <h3>Auto Clean on Tab Close</h3>
+                <p>Cookies are automatically deleted when you close a tab and no other tab uses the same domain.</p>
+            </div>
+            <div class="feature">
+                <h3>Smart Whitelist</h3>
+                <p>Keep cookies for sites you trust. Supports wildcards like *.google.com.</p>
+            </div>
+            <div class="feature">
+                <h3>Greylist (Temp Protect)</h3>
+                <p>Temporarily protect cookies for the current session. Clears on browser restart.</p>
+            </div>
+            <div class="feature">
+                <h3>Delay Protection</h3>
+                <p>Configurable delay before cleaning, so you can reopen accidentally closed tabs.</p>
+            </div>
+            <div class="feature">
+                <h3>Cookie Aging</h3>
+                <p>Auto-delete cookies older than a set number of days. Keep your browser fresh.</p>
+            </div>
+            <div class="feature">
+                <h3>Scheduled Cleanup</h3>
+                <p>Daily or weekly automatic cleanup of all non-whitelisted cookies.</p>
+            </div>
+            <div class="feature">
+                <h3>Statistics Dashboard</h3>
+                <p>See how many cookies were deleted, which domains are tracked, and cleanup history.</p>
+            </div>
+            <div class="feature">
+                <h3>Import / Export</h3>
+                <p>Import your whitelist from Cookie AutoDelete or export for backup.</p>
+            </div>
+        </div>
 
-             <div class="pricing">
-                 <div class="trial">60-day free trial &middot; All features included</div>
-                 <div class="price">$2</div>
-                 <div class="label">One-time payment &middot; Lifetime access</div>
-                 <p style="color: #94a3b8; margin-top: 16px; font-size: 0.85rem;">No subscriptions. No recurring fees. Pay
-     once, use forever.</p>
-             </div>
+        <div class="pricing">
+            <div class="trial">60-day free trial &middot; All features included</div>
+            <div class="price">$2</div>
+            <div class="label">One-time payment &middot; Lifetime access</div>
+            <p style="color: #94a3b8; margin-top: 16px; font-size: 0.85rem;">No subscriptions. No recurring fees. Pay once, use forever.</p>
+        </div>
 
-             <div class="privacy">
-                 <h3>Zero Data Collection</h3>
-                 <p>All data stays on your device. We never collect, transmit, or store any of your browsing data or
-     cookies. Your privacy is absolute.</p>
-             </div>
-         </div>
+        <div class="privacy">
+            <h3>Zero Data Collection</h3>
+            <p>All data stays on your device. We never collect, transmit, or store any of your browsing data or cookies. Your privacy is absolute.</p>
+        </div>
+    </div>
 
-         <footer>
-             <p>Smart Cookie Cleaner &copy; 2026 &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a
-     href="mailto:harry567566@gmail.com">Contact</a></p>
-         </footer>
-     </body>
-     </html>
+    <footer>
+        <p>Smart Cookie Cleaner &copy; 2026 &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="mailto:harry567566@gmail.com">Contact</a></p>
+    </footer>
+</body>
+</html>
